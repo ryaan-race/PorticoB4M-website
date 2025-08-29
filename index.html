@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PorticoB4M</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PorticoB4M Restaurant</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>PorticoB4M Website</h1>
+
+<header>
+  <div class="brand">
+    <img src="images/logo.png" alt="PorticoB4M Logo">
+    <div>
+      <h1>PorticoB4M</h1>
+      <p class="small">Dealing Chambers, JM Road · Pune</p>
+    </div>
+  </div>
+
+  <div class="header-search">
+    <input type="search" id="headerSearch" placeholder="Search dishes or categories...">
+  </div>
+
+  <nav>
+    <a href="#menu" class="active">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Book Table</a>
+    <a href="#kds">KDS</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="actions">
+    <div id="cartIcon">🛒 <span id="cartCount">0</span></div>
+    <button class="btn" id="reserveBtn">Reserve</button>
+    <button class="btn secondary" onclick="location.href='tel:+919049321010'">Call</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Welcome to PorticoB4M</h2>
+    <p>Experience the finest dining with delicious cuisines and premium ambiance.</p>
+    <button class="btn" id="heroReserveBtn">Reserve a Table</button>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-filters">
+    <button class="btn secondary" data-category="All">All</button>
+    <button class="btn secondary" data-category="Pizza">Pizza</button>
+    <button class="btn secondary" data-category="Burger">Burger</button>
+    <button class="btn secondary" data-category="Pasta">Pasta</button>
+    <button class="btn secondary" data-category="Dessert">Dessert</button>
+    <button class="btn secondary" data-category="Beverage">Beverage</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/gallery1.jpg" alt="">
+    <img src="images/gallery2.jpg" alt="">
+    <img src="images/gallery3.jpg" alt="">
+    <img src="images/gallery4.jpg" alt="">
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book a Table</h2>
+  <div style="display:flex; gap:10px;">
+    <button class="btn secondary" id="tabPortico">PorticoB4M</button>
+    <button class="btn secondary" id="tabSkyport">SkyPort</button>
+  </div>
+  <div id="bookingContent">
+    <p>Select a location and click “Reserve Table”.</p>
+    <button class="btn" id="bookTableBtn">Reserve Table</button>
+  </div>
+</section>
+
+<section id="kds">
+  <h2>Kitchen Display System (Demo)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Order</th><th>Qty</th><th>Status</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="kdsBody">
+      <tr><td colspan="4">No orders yet.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer id="contact">
+  <h3>Contact Us</h3>
+  <p>Portico B4M, Dealing Chambers, Near HP Petrol Pump, JM Road, Shivaji Nagar, Pune - 411005</p>
+  <p>Opening Time: ⏰ 11:30 AM – 11:30 PM</p>
+  <p>☎️ 9049 32 1010 / 9049 37 1010</p>
+  <p><a href="https://wa.me/919049321010" target="_blank">Reserve via WhatsApp</a></p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
